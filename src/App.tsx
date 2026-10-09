@@ -10,6 +10,7 @@ import {
 import { RunningFace } from './assets/animation/runner';
 import { AppShell } from './components/AppShell';
 import { ParallaxBackground } from './components/ParallaxBackground';
+import { Preloader } from './components/Preloader';
 import { RequireAuth } from './components/RequireAuth';
 import { LoginPage } from './pages/LoginPage';
 import { WebhookEditPage } from './pages/WebhookEditPage';
@@ -32,9 +33,12 @@ function SessionWatcher() {
 
   return (
     <LayoutGroup>
-      <ParallaxBackground />
-      <RunningFace />
-      <Outlet />
+      <Preloader />
+      <div id='app-frame'>
+        <ParallaxBackground />
+        <RunningFace />
+        <Outlet />
+      </div>
     </LayoutGroup>
   );
 }

@@ -141,7 +141,7 @@ function CopyLine({ value }: { value: string }) {
             exit={{ opacity: 0, transition: { duration: 0.35, ease: 'easeOut' } }}
             transition={{ type: 'spring', stiffness: 520, damping: 16 }}
           >
-            Copied!
+            Скопійовано!
           </motion.span>
         ) : null}
       </AnimatePresence>
